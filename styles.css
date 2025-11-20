@@ -1,0 +1,284 @@
+:root {
+  --olivo: #6f7b3b;
+  --olivo-dark: #3e4523;
+  --beige: #f7f7f2;
+  --gris: #5b5b5b;
+  --bg: #faf9f6;
+  --negro: #1a1a1a;
+  --sombra: rgba(0, 0, 0, 0.15);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  font-family: "Raleway", sans-serif;
+  color: var(--negro);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 28px;
+  background: var(--olivo-dark);
+  color: white;
+  box-shadow: 0 6px 12px var(--sombra);
+}
+
+.brand-wrap {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.logo-circle {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: var(--beige);
+  color: var(--olivo-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 1.2rem;
+  box-shadow: 0 4px 10px var(--sombra);
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand {
+  font-family: "Montserrat", sans-serif;
+  font-size: 2rem;
+  margin: 0;
+  letter-spacing: 2px;
+}
+
+.tagline {
+  margin: 4px 0 0;
+  font-size: 0.9rem;
+  opacity: 0.85;
+}
+
+.btn-refresh {
+  background: var(--olivo);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 40px;
+  transition: all 0.2s ease;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.9rem;
+}
+
+.btn-refresh:hover {
+  background: #87944b;
+  transform: translateY(-2px);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 30px auto 40px;
+  padding: 0 20px;
+}
+
+.slider-container {
+  position: relative;
+  width: 100%;
+  height: 360px;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px var(--sombra);
+  margin-bottom: 30px;
+}
+
+.slider {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.7s ease-in-out;
+}
+
+.slide {
+  min-width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(75%);
+}
+
+.slide-content {
+  position: absolute;
+  bottom: 25px;
+  left: 25px;
+  right: 25px;
+  color: white;
+}
+
+.slide-title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.6rem;
+  margin: 0;
+  cursor: pointer;
+}
+
+.slide-title:hover {
+  text-decoration: underline;
+}
+
+.slide-meta {
+  font-size: 0.85rem;
+  opacity: 0.85;
+}
+
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.4);
+  border: none;
+  color: white;
+  font-size: 1.8rem;
+  border-radius: 50%;
+  width: 42px;
+  height: 42px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.slider-btn:hover {
+  background: rgba(0,0,0,0.65);
+}
+
+.slider-btn.prev {
+  left: 15px;
+}
+
+.slider-btn.next {
+  right: 15px;
+}
+
+/* DOTS */
+.slider-dots {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  background: rgba(255,255,255,0.6);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.dot.active {
+  background: white;
+}
+
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+  gap: 24px;
+}
+
+.news-card {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 18px var(--sombra);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.news-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.news-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.news-body {
+  padding: 14px 16px 16px;
+}
+
+.news-title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.05rem;
+  margin: 0 0 6px;
+  color: var(--olivo-dark);
+  cursor: pointer;
+}
+
+.news-title:hover {
+  text-decoration: underline;
+}
+
+.news-meta {
+  font-size: 0.7rem;
+  color: var(--gris);
+  margin-bottom: 8px;
+}
+
+.news-desc {
+  font-size: 0.9rem;
+}
+
+.loading {
+  text-align: center;
+  color: var(--gris);
+  font-size: 0.95rem;
+}
+
+.footer {
+  background: var(--olivo-dark);
+  color: white;
+  text-align: center;
+  padding: 16px;
+  font-size: 0.85rem;
+  margin-top: 30px;
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .slider-container {
+    height: 260px;
+  }
+
+  .slide-content {
+    bottom: 18px;
+    left: 18px;
+    right: 18px;
+  }
+
+  .slide-title {
+    font-size: 1.2rem;
+  }
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lector de Noticias –TIMES</title>
+
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Raleway:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header class="header">
+    <div class="brand-wrap">
+      <div class="logo-circle">RP</div>
+      <div class="brand-text">
+        <h1 class="brand">TIMES</h1>
+        <p class="tagline">Noticias de videojuegos y tecnología en tiempo real</p>
+      </div>
+    </div>
+
+    <button id="refreshBtn" class="btn-refresh">Actualizar noticias</button>
+  </header>
+
+  <main class="container">
+
+    <section class="slider-container">
+      <div class="slider" id="slider"></div>
+
+      <button class="slider-btn prev" id="sliderPrev">❮</button>
+      <button class="slider-btn next" id="sliderNext">❯</button>
+
+      <div class="slider-dots" id="sliderDots"></div>
+    </section>
+
+ 
+    <section id="newsContainer" class="news-grid">
+      <p class="loading">Cargando noticias...</p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>TIMES · Proyecto académico · 2025</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
